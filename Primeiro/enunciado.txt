@@ -1,6 +1,9 @@
-Faça um programa que faça a união, [interseção], [diferença], produto cartesiano de 2 conjuntos.
+Faça um programa que faça a [união], [interseção], [diferença], {produto cartesiano} de 2 conjuntos.
 Que verifique se um elemento pertence ou não a um conjunto. 
 Que verifique se um conjunto está ou não contido em outro.
 
 Não use funções, bibliotecas, métodos prontos para isso. 
 Resolva de forma fundamental, usando apenas as estruturas básicas de linguagem escolhida.
+
+[Feito]
+{A fazer}
