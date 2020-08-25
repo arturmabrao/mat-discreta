@@ -47,7 +47,7 @@ def contemelemento(e,conj1):
 def recebeconj(nome):
     conj = []
     while True:
-        conj.append(int(input(f'Digite um elemnto do conjunto {nome}: ')))
+        conj.append(int(input(f'Digite um elemnto do conjunto {nome}: (Apenas inteiros) ')))
         continua = input(f'Digitar novo elemento? [S/N] ')
         if continua in 'Nn':
             break
@@ -106,7 +106,7 @@ else:
         print(f"Os conjuntos não contêm um ao outro")
 
 # Se há o elemento nos conjuntos
-e = (int(input(f'Digite um elemento para buscar nos conjuntos: ')))
+e = (int(input(f'Insira número inteiro para buscar nos conjuntos: ')))
 c1ce = contemelemento(e,c1)
 c2ce = contemelemento(e,c2)
 # Retorna sobre os conjuntos conterem o elemento e
