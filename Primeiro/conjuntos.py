@@ -55,19 +55,21 @@ def recebeconj(nome):
     print(f'Seu conjunto digitado foi: {conj}\n')
     return conj
 
-# def prodcart(conj1, conj2):
-#     cart = []
-#     for i in conj1:
-#         for j in conj2:
-#             print(f'<{conj1[i]},{conj2[j]}>')
-#     return cart
-#
+def prodcart(conj1, conj2):
+    cart = []
+    for i in range(len(conj1)):
+        for j in range(len(conj2)):
+            cart.append(f'<{conj1[i]}, {conj2[j]}>')
+        j = 0
+    return cart
+
 
 c1 = recebeconj('A')
 c2 = recebeconj('B')
 
-# c1 = [0,4]
-# c2 = [1,0]
+# Variáveis fixas para teste
+# c1 = [0,5]
+# c2 = [1,2]
 
 
 # Elimina repetiçao e ordena
@@ -91,8 +93,8 @@ contem_c2emc1 = seestacontido(c2,c1)
 print(f"Seus conjuntos são:\n  A = {c1}\n  B = {c2}\n")
 
 print(f"Subtrações:\n  A - B = {diferenca_1p2}\n  B - A = {diferenca_2p1} \n")
-print(f"A interseção dos conjuntos = {intersecao} \n")
-print(f"União de A com B = {uniao} \n")
+print(f"Interseção dos conjuntos = {intersecao} \n")
+print(f"União dos conjuntos = {uniao} \n")
 
 # Retorna sobre os conjuntos serem iguais ou um conter o outro
 if contem_c2emc1 == True and contem_c1emc2 == True:
@@ -105,13 +107,20 @@ else:
     else:
         print(f"Os conjuntos não contêm um ao outro")
 
+# Produto cartesiano
+cartesiano_ab = prodcart(c1,c2)
+cartesiano_ba = prodcart(c2,c1)
+print(f"\nProduto cartesiano \n  A x B =  {cartesiano_ab} \n  B x A =  {cartesiano_ba}")
+
 # Se há o elemento nos conjuntos
-e = (int(input(f'Insira número inteiro para buscar nos conjuntos: ')))
+e = (int(input(f'\nInsira número inteiro para buscar nos conjuntos: ')))
 c1ce = contemelemento(e,c1)
 c2ce = contemelemento(e,c2)
+
+
 # Retorna sobre os conjuntos conterem o elemento e
 if c1ce == True and c2ce == True:
-    print(f"Ambos conjuntos conjuntos têm o elemento {e}")
+    print(f"\nAmbos conjuntos conjuntos têm o elemento {e}")
 else:
     if c1ce == True:
         print(f"{e} está presente no conjunto A")
@@ -119,6 +128,3 @@ else:
         print(f"{e} está presente no conjunto B")
     else:
         print(f"{e} não está presente em nenhum dos conjuntos")
-
-# cartesiano = prodcart(c1,c2)
-# print(f"Produto cartesiano: {cartesiano}")
