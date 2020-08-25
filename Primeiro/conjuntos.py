@@ -44,11 +44,31 @@ def contemelemento(e,conj1):
             return True
     return False
 
+def recebeconj(nome):
+    conj = []
+    while True:
+        conj.append(int(input(f'Digite um elemnto do conjunto {nome}: ')))
+        continua = input(f'Digitar novo elemento? [S/N] ')
+        if continua in 'Nn':
+            break
+        # conj.append(elemento)
+    print(f'Seu conjunto digitado foi: {conj}\n')
+    return conj
 
-c1 = [0,4,2]
-c2 = [1,0,4,2]
+# def prodcart(conj1, conj2):
+#     cart = []
+#     for i in conj1:
+#         for j in conj2:
+#             print(f'<{conj1[i]},{conj2[j]}>')
+#     return cart
+#
 
-e = 1
+c1 = recebeconj('A')
+c2 = recebeconj('B')
+
+# c1 = [0,4]
+# c2 = [1,0]
+
 
 # Elimina repetiçao e ordena
 c1 = retirarepeticaoeordena(c1)
@@ -68,13 +88,11 @@ uniao = unir(c1,c2)
 contem_c1emc2 = seestacontido(c1,c2)
 contem_c2emc1 = seestacontido(c2,c1)
 
+print(f"Seus conjuntos são:\n  A = {c1}\n  B = {c2}\n")
 
-print(f"Conjunto A sem repetições e ordenado: {c1}")
-print(f"Conjunto B  sem repetições e ordenado: {c2}")
-print(f"A interseção dos conjuntos é: {intersecao}")
-print(f"A diferença de A para B: {diferenca_1p2}")
-print(f"A diferença de B para A: {diferenca_2p1}")
-print(f"União de A com B: {uniao}")
+print(f"Subtrações:\n  A - B = {diferenca_1p2}\n  B - A = {diferenca_2p1} \n")
+print(f"A interseção dos conjuntos = {intersecao} \n")
+print(f"União de A com B = {uniao} \n")
 
 # Retorna sobre os conjuntos serem iguais ou um conter o outro
 if contem_c2emc1 == True and contem_c1emc2 == True:
@@ -88,9 +106,9 @@ else:
         print(f"Os conjuntos não contêm um ao outro")
 
 # Se há o elemento nos conjuntos
+e = (int(input(f'Digite um elemento para buscar nos conjuntos: ')))
 c1ce = contemelemento(e,c1)
 c2ce = contemelemento(e,c2)
-
 # Retorna sobre os conjuntos conterem o elemento e
 if c1ce == True and c2ce == True:
     print(f"Ambos conjuntos conjuntos têm o elemento {e}")
@@ -101,3 +119,6 @@ else:
         print(f"{e} está presente no conjunto B")
     else:
         print(f"{e} não está presente em nenhum dos conjuntos")
+
+# cartesiano = prodcart(c1,c2)
+# print(f"Produto cartesiano: {cartesiano}")
