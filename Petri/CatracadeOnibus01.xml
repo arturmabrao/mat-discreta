@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><pnml>
+    <net id="Net-One" type="P/T net">
+        <token id="Default" enabled="true" red="0" green="0" blue="0"/>
+        <token id="IdosoPCD" enabled="true" red="0" green="0" blue="255"/>
+        <token id="PassagemComum" enabled="true" red="52" green="168" blue="54"/>
+        <token id="Recarga" enabled="true" red="255" green="0" blue="0"/>
+        <place id="CatracaLiberada">
+            <graphics>
+                <position x="810.0" y="420.0"/>
+            </graphics>
+            <name>
+                <value>CatracaLiberada</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0,Recarga,0,IdosoPCD,0,PassagemComum,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="CatracaTravada">
+            <graphics>
+                <position x="75.0" y="225.0"/>
+            </graphics>
+            <name>
+                <value>CatracaTravada</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0,Recarga,0,IdosoPCD,0,PassagemComum,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="CobradorConfirmaID">
+            <graphics>
+                <position x="600.0" y="270.0"/>
+            </graphics>
+            <name>
+                <value>CobradorConfirmaID</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0,Recarga,0,IdosoPCD,0,PassagemComum,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="DebitaSaldo">
+            <graphics>
+                <position x="585.0" y="105.0"/>
+            </graphics>
+            <name>
+                <value>DebitaSaldo</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0,Recarga,0,IdosoPCD,0,PassagemComum,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <place id="Validacao">
+            <graphics>
+                <position x="270.0" y="240.0"/>
+            </graphics>
+            <name>
+                <value>Validacao</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>Default,0,Recarga,0,IdosoPCD,0,PassagemComum,0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+        </place>
+        <transition id="HaRecarga">
+            <graphics>
+                <position x="360.0" y="330.0"/>
+            </graphics>
+            <name>
+                <value>HaRecarga</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>false</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="HaSaldo">
+            <graphics>
+                <position x="420.0" y="105.0"/>
+            </graphics>
+            <name>
+                <value>HaSaldo</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>false</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="IdosoPCD">
+            <graphics>
+                <position x="450.0" y="270.0"/>
+            </graphics>
+            <name>
+                <value>IdosoPCD</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>false</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="LiberacaodaCatraca">
+            <graphics>
+                <position x="810.0" y="180.0"/>
+            </graphics>
+            <name>
+                <value>LiberacaodaCatraca</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>false</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="NaoHaSaldo">
+            <graphics>
+                <position x="285.0" y="105.0"/>
+            </graphics>
+            <name>
+                <value>NaoHaSaldo</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>false</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="PassaCartao">
+            <graphics>
+                <position x="180.0" y="240.0"/>
+            </graphics>
+            <name>
+                <value>PassaCartao</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>false</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <transition id="UmaVoltaNaCatraca">
+            <graphics>
+                <position x="435.0" y="420.0"/>
+            </graphics>
+            <name>
+                <value>UmaVoltaNaCatraca</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>false</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+        </transition>
+        <arc id="CatracaLiberada to UmaVoltaNaCatraca" source="CatracaLiberada" target="UmaVoltaNaCatraca">
+            <graphics/>
+            <inscription>
+                <value>Default,1,Recarga,0,IdosoPCD,0,PassagemComum,0</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="807" y="432" curvePoint="false"/>
+            <arcpath id="001" x="451" y="432" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="CatracaTravada to PassaCartao" source="CatracaTravada" target="PassaCartao">
+            <graphics/>
+            <inscription>
+                <value>Default,1,Recarga,1,IdosoPCD,1,PassagemComum,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="101" y="239" curvePoint="false"/>
+            <arcpath id="001" x="186" y="252" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="CobradorConfirmaID to LiberacaodaCatraca" source="CobradorConfirmaID" target="LiberacaodaCatraca">
+            <graphics/>
+            <inscription>
+                <value>Default,0,Recarga,0,IdosoPCD,1,PassagemComum,0</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="625" y="276" curvePoint="false"/>
+            <arcpath id="001" x="816" y="197" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="DebitaSaldo to LiberacaodaCatraca" source="DebitaSaldo" target="LiberacaodaCatraca">
+            <graphics/>
+            <inscription>
+                <value>Default,0,Recarga,0,IdosoPCD,0,PassagemComum,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="611" y="121" curvePoint="false"/>
+            <arcpath id="001" x="712" y="154" curvePoint="false"/>
+            <arcpath id="002" x="817" y="187" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="HaRecarga to CatracaTravada" source="HaRecarga" target="CatracaTravada">
+            <graphics/>
+            <inscription>
+                <value>Default,0,Recarga,0,IdosoPCD,0,PassagemComum,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="372" y="357" curvePoint="false"/>
+            <arcpath id="001" x="372" y="387" curvePoint="false"/>
+            <arcpath id="002" x="200" y="377" curvePoint="false"/>
+            <arcpath id="003" x="96" y="248" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="HaSaldo to DebitaSaldo" source="HaSaldo" target="DebitaSaldo">
+            <graphics/>
+            <inscription>
+                <value>Default,0,Recarga,0,IdosoPCD,0,PassagemComum,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="436" y="117" curvePoint="false"/>
+            <arcpath id="001" x="582" y="117" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="IdosoPCD to CobradorConfirmaID" source="IdosoPCD" target="CobradorConfirmaID">
+            <graphics/>
+            <inscription>
+                <value>Default,0,Recarga,0,IdosoPCD,1,PassagemComum,0</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="466" y="282" curvePoint="false"/>
+            <arcpath id="001" x="597" y="282" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="LiberacaodaCatraca to CatracaLiberada" source="LiberacaodaCatraca" target="CatracaLiberada">
+            <graphics/>
+            <inscription>
+                <value>Default,1,Recarga,0,IdosoPCD,0,PassagemComum,0</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="822" y="207" curvePoint="false"/>
+            <arcpath id="001" x="822" y="417" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="NaoHaSaldo to CatracaTravada" source="NaoHaSaldo" target="CatracaTravada">
+            <graphics/>
+            <inscription>
+                <value>Default,1,Recarga,0,IdosoPCD,0,PassagemComum,0</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="291" y="117" curvePoint="false"/>
+            <arcpath id="001" x="122" y="126" curvePoint="false"/>
+            <arcpath id="002" x="91" y="222" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="PassaCartao to Validacao" source="PassaCartao" target="Validacao">
+            <graphics/>
+            <inscription>
+                <value>Default,1,Recarga,1,IdosoPCD,1,PassagemComum,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="196" y="252" curvePoint="false"/>
+            <arcpath id="001" x="229" y="250" curvePoint="false"/>
+            <arcpath id="002" x="267" y="251" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="UmaVoltaNaCatraca to CatracaTravada" source="UmaVoltaNaCatraca" target="CatracaTravada">
+            <graphics/>
+            <inscription>
+                <value>Default,1,Recarga,0,IdosoPCD,0,PassagemComum,0</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="441" y="432" curvePoint="false"/>
+            <arcpath id="001" x="149" y="433" curvePoint="false"/>
+            <arcpath id="002" x="91" y="251" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="Validacao to HaRecarga" source="Validacao" target="HaRecarga">
+            <graphics/>
+            <inscription>
+                <value>Default,0,Recarga,1,IdosoPCD,0,PassagemComum,0</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="282" y="266" curvePoint="false"/>
+            <arcpath id="001" x="283" y="333" curvePoint="false"/>
+            <arcpath id="002" x="366" y="342" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="Validacao to HaSaldo" source="Validacao" target="HaSaldo">
+            <graphics/>
+            <inscription>
+                <value>Default,0,Recarga,0,IdosoPCD,0,PassagemComum,1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="293" y="241" curvePoint="false"/>
+            <arcpath id="001" x="426" y="117" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="Validacao to IdosoPCD" source="Validacao" target="IdosoPCD">
+            <graphics/>
+            <inscription>
+                <value>Default,0,Recarga,0,IdosoPCD,1,PassagemComum,0</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="296" y="254" curvePoint="false"/>
+            <arcpath id="001" x="456" y="282" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="Validacao to NaoHaSaldo" source="Validacao" target="NaoHaSaldo">
+            <graphics/>
+            <inscription>
+                <value>Default,1,Recarga,0,IdosoPCD,0,PassagemComum,0</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <arcpath id="000" x="283" y="237" curvePoint="false"/>
+            <arcpath id="001" x="297" y="132" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+    </net>
+</pnml>
